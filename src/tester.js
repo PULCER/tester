@@ -14,10 +14,11 @@ export function TesterMan() {
     ])
 
     const handleEventChange = (e, id) => {
-        eventOddsValue[id].value = eventOddsValue[id].value + e.target.value
+        eventOddsValue[id].value = e.target.value
         setEventOddsValue((prevState) => {
             return prevState
         })
+        console.log(eventOddsValue)
     }
 
 
@@ -32,7 +33,6 @@ export function TesterMan() {
                             onChange={(e) => {
                                 handleEventChange(e, event.id)
                             }}
-                            value={event.value}
                         >
                         </input>
                     </label>
